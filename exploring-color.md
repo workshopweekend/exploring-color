@@ -16,7 +16,7 @@ An RGB LED, then, approximately lets us produce any color we want by varying the
 
 3.  Connect the red, green, and blue legs of the LED to pins 9, 10, and 11:
 
-    ![legs-connected-to-pins dim=400wL](img/legs-connected-to-pins.png) ![legs-connected-to-pins dim=400wL](img/legs-connected-to-pins-schematic.png)
+    ![legs-connected-to-pins dim=400wL](img/legs-connected-to-pins.png "Fritzing for RGB LED on pins 9, 10, 11") ![legs-connected-to-pins dim=400wL](img/legs-connected-to-pins-schematic.png "Schematic for RGB LED on pins 9, 10, 11")
 
 4.  Write code to get these colors in this sequence: red, green, blue, red+green (yellow?), green+blue (cyan?), blue+red (magenta?), red+green+blue (white?).
 
