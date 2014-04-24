@@ -19,58 +19,7 @@ An RGB LED, then, approximately lets us produce any color we want by varying the
     ![legs-connected-to-pins dim=400wL](img/legs-connected-to-pins.png "Fritzing for RGB LED on pins 9, 10, 11") ![legs-connected-to-pins dim=400wL](img/legs-connected-to-pins-schematic.png "Schematic for RGB LED on pins 9, 10, 11")
 
 4.  Write code to get these colors in this sequence: red, green, blue, red+green (yellow?), green+blue (cyan?), blue+red (magenta?), red+green+blue (white?).
-
-        int redPin = 9;
-        int greenPin = 10;
-        int bluePin = 11;
-
-        void setup() {
-          pinMode(redPin, OUTPUT);
-          pinMode(greenPin, OUTPUT);
-          pinMode(bluePin, OUTPUT);
-        }
-
-        void clear() {
-          digitalWrite(redPin, LOW);
-          digitalWrite(greenPin, LOW);
-          digitalWrite(bluePin, LOW);
-        }
-
-        void loop() {
-          digitalWrite(redPin, HIGH);
-          delay(1000);
-          clear();
-
-          digitalWrite(greenPin, HIGH);
-          delay(1000);
-          clear();
-
-          digitalWrite(bluePin, HIGH);
-          delay(1000);
-          clear();
-    
-          digitalWrite(redPin, HIGH);
-          digitalWrite(greenPin, HIGH);
-          delay(1000);
-          clear();
-    
-          digitalWrite(greenPin, HIGH);
-          digitalWrite(bluePin, HIGH);
-          delay(1000);
-          clear();
-    
-          digitalWrite(bluePin, HIGH);
-          digitalWrite(redPin, HIGH);
-          delay(1000);
-          clear();
-    
-          digitalWrite(redPin, HIGH);
-          digitalWrite(greenPin, HIGH);
-          digitalWrite(bluePin, HIGH);
-          delay(1000);
-          clear();
-        }
-
+    <%= sequence.ino =%>
 * Observe that the mixed colors are not accurate -- the proportions are pretty far off! How can we correct this?
 * We can adjust brightness of an LED (and an LED channel) using "analogWrite" -- it's not really analog in the true sense, it just blinks quickly in a pattern called PWM. [Note on PWM.]
 * Let's use a potentiometer to control the brightness of channel to aid us in improving color fidelity. Connect your two potentiometers to analog pins A0 and A1. Borrow a third and connect it to analog pin A2.
