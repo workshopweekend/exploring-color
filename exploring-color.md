@@ -9,10 +9,15 @@ Your eye has three types of color-sensitive cells (called *cones*). Each type is
 An RGB LED, then, approximately lets us produce any color we want by varying the red, green, and blue channels individually. Let’s explore that.
 
 1.  Start with the following circuit. Make sure to orient the LED correctly -- the flat side should be on the left as in the diagram below.
-    ![just-the-led dim=300h](img/just-the-led-please.png)
+
+    ![just-the-led dim=300h](img/just-the-led-please.png)    ![just-the-led-schematic dim=300h](img/just-the-led-please-schematic.png)
+
 2.  The LED should appear blue. The the end of the wire connected to the LED's resistor and move it between the red, green, and blue positions. Observe the LED's colors.
+
 3.  Connect the red, green, and blue legs of the LED to pins 9, 10, and 11:
-    ![legs-connected-to-pins dim=300h](img/legs-connected-to-pins.png)
+
+    ![legs-connected-to-pins dim=300h](img/legs-connected-to-pins.png) ![legs-connected-to-pins dim=300h](img/legs-connected-to-pins-schematic.png)
+
 4.  Write code to get these colors in this sequence: red, green, blue, red+green (yellow?), green+blue (cyan?), blue+red (magenta?), red+green+blue (white?).
 
         int redPin = 9;
