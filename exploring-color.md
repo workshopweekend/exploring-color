@@ -10,7 +10,7 @@ An RGB LED, then, approximately lets us produce any color we want by varying the
 
 1.  Start with the following circuit. Make sure to orient the LED correctly -- the flat side should be on the left as in the diagram below.
 
-    ![just-the-led dim=300h](img/just-the-led-please.png)    ![just-the-led-schematic dim=300h](img/just-the-led-please-schematic.png)
+    ![just-the-led dim=300h](img/just-the-led-please.png) ![just-the-led-schematic dim=300h](img/just-the-led-please-schematic.png)
 
 2.  The LED should appear blue. The the end of the wire connected to the LED's resistor and move it between the red, green, and blue positions. Observe the LED's colors.
 
