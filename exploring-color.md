@@ -24,17 +24,28 @@ An RGB LED, then, approximately lets us produce any color we want by varying the
 
     Modify the sequence code to reduce the brightness of the blue channel wherever it is used. The [`analogWrite` reference](http://arduino.cc/en/Reference/AnalogWrite) (and specifically the included example code) may be helpful.
 
-7.  Uploading new code to see a new color is tedious. Insteas, use a potentiometer to control the brightness of each color. Connect your two potentiometers to analog pins A0 and A1. Borrow a third potentiometer and connect it to analog pin A2:
+7.  Uploading new code to see a new color is tedious. Insteas, use a potentiometer to control the brightness of each color. Connect your two potentiometers to analog pins `A0` and `A1`. Borrow a third potentiometer and connect it to analog pin `A2`:
 
     ![three-potentiometers dim=400wL](img/three-potentiometers.png "Fritzing for RGB LED and three potentiometers") ![three-potentiometers dim=400wL](img/three-potentiometers-schematic.png "Schematic for RGB LED and three potentiometers")
 
-8.  Use analogRead on pins A0, A1, and A2, respectively, to set the value for analogWrite on redPin, greenPin, and bluePin:
+8.  Use analogRead on pins `A0`, `A1`, and `A2`, respectively, to set the value for analogWrite on redPin, greenPin, and bluePin. Note that `analogRead` returns a number between `0` and `1023`, while `analogWrite` requires a number between `0` and `255`. To adapt the read value to be written, we can simply divide by `4`. In case you get stuck, here's the code:
     <%= analogRead_to_analogWrite.ino =%>
-9.  Turn the LED off by turning all pots to 0.
-* Experiment by turning the red and green pots to get a convincing orange color. (Likely to be full red and a little green.)
-* Adjust the pots to get as close to white as you can.
-* Use Serial.println to inspect the analogWrite values for red, green, and blue that produce white. We'll set these values as the maximum value for each channel.
-* Write a setAdjustedColor function that uses map to convert the 0..1023 range of each analogInput to the 0..max for each channel.
+9.  Turn all the potentiometers to 0. You should observe the LED off.
+
+10. Modify your code to use the [`map` function](http://arduino.cc/en/Reference/map) instead of dividing by 4.
+
+11. Experiment by turning the red and green potentiometers to get a convincing orange color. (Likely to be full red and a little green.) Can you get teal? Purple? What about a gray color?
+
+12. Adjust all three potentiometers to get as close to white as you can.
+
+12. `Serial.println` sends the values used in `analogWrite` to the serial monitor. Open the serial monitor and note which values for red, green, and blue produce the most compelling white color. You'll use these values to set the maximum end of the range for each channel.
+
+13. Write a function called `setAdjustedColor` that uses map to convert the 0..1023 range of each analogInput to the 0..max for each channel. Here's a snippet to get you started:
+        //codeExt=ino
+        void setAdjustedColor(int redValue, int greenValue, int blueValue) {
+          analogWrite()
+        }
+
 * Use setAdjustedColor to set the LED's color based on the three pot values. Verify that the LED is white when the three pots are all the way on.
 * Setting the red, green, and blue components is common, but not always the most useful way to think about color. Sometimes you want to pick a hue and keep it as bright and saturated as possible. That's what the Hue-Saturation-Brightness (HSB) color representation does.
 * Use setHSBColor (provided) to control the hue, saturation, and brightness of the LED using the three potentiometers connected to pins A0, A1, A2.
