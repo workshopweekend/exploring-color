@@ -34,7 +34,7 @@ An RGB LED, then, approximately lets us produce any color we want by varying the
 
 10. Modify your code to use [the `map` function](http://arduino.cc/en/Reference/map) to convert the input value to the output value, instead of dividing by 4.
 
-11. Experiment by turning the red and green potentiometers to get a convincing orange color. (Try full red and a little green?) Can you get teal? Purple? What about Gray?
+11. Experiment by turning the red and green potentiometers to get a convincing orange color. (Try full red and a little green?) Can you get teal? Purple? What about gray?
 
 12. In the next few steps, you'll modify your code so that turning all three potentiometers fully on produces a nice white color.
 
