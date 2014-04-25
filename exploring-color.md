@@ -58,8 +58,8 @@ An RGB LED, then, approximately lets us produce any color we want by varying the
 
 
 ## Challenges:
-1.  Use random() or another algorithm to slowly cycle through colors.
+1.  Use `random()` or another algorithm to slowly cycle through colors.
 2.  Connect a button to a digital input pin.
     - Modify the code so that the color of the LED doesn't change when the pots are rotated, but only when the button is pressed.
     - Instead of changing the color with the pots, increase the hue whenever the button is pressed, keeping full brightness and saturation. 
-    - Instead of using a button, try the capsense library and a piece of copper foil. (You might use this in a lamp that changes color by touch.)
+    - Instead of using a button, try using the [CapSense library](http://playground.arduino.cc/Main/CapacitiveSensor) and a piece of copper foil. (For example, you could use this in a lamp that changes color by touch.)
