@@ -1,8 +1,8 @@
 # Exploring Color
 
-An RGB LED works like a computer screen; it relies on how your eye detects color. Your eye has three types of color-sensitive cells (called *cones*). Each type is most sensitive to a particular color of light: red light, green light, and blue light. We perceive different relative proportions of those colors as different colors. For example, yellow light triggers the red- and green-sensitive cells in roughly equal amounts, and we perceive yellow light. That fact allows us to fake "yellow" by producing red and green in equal amounts. In this lab, we'll play with colors and explore this effect.
+An RGB LED works like a computer screen; it relies on how your eye detects color. Your eye has three types of color-sensitive cells (called *cones*). Each type is most sensitive to a particular color of light: red light, green light, and blue light. We perceive different relative proportions of those colors as different colors. For example, yellow light triggers the red- and green-sensitive cells in a certain proportion, and we perceive yellow light. That fact allows us to fake "yellow" by producing red and green in that same proportion. In this lab, we'll play with colors and explore this effect.
 
-![chart-explains-all](color-chart.png)
+![color-receptivity](color-receptivity.png "Sensitivity of the red, green, and blue cone cells")
 
 An RGB LED, then, approximately lets us produce any color we want by varying the red, green, and blue channels individually. Let’s explore that.
 
