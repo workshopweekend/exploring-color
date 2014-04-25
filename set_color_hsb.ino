@@ -25,5 +25,5 @@ void setColorHSB(int hue, unsigned int saturation, unsigned int value) {
     b = secondary;
   }
 
-  setColorAdjusted(r+offset, g+offset, b+offset);
+  setAdjustedColor(r+offset, g+offset, b+offset);
 }
