@@ -8,7 +8,7 @@ An RGB LED, then, approximately lets us produce any color we want by varying the
 
 1.  Start with the following circuit. Make sure to orient the LED correctly -- the flat side should be on the left as in the diagram below.
 
-    ![just-the-led dim=400wL](img/just-the-led-please.png "Fritzing for RGB LED with sigle active channel") ![just-the-led-schematic dim=400wL](img/just-the-led-please-schematic.png "Schematic for RGB LED with sigle active channel")
+    ![just-the-led dim=400wL](img/just-the-led-please.png "Fritzing for RGB LED with single active channel") ![just-the-led-schematic dim=400wL](img/just-the-led-please-schematic.png "Schematic for RGB LED with single active channel")
 
 2.  The LED should appear blue. The the end of the wire connected to the LED's resistor and move it between the red, green, and blue positions. Observe the LED's color change.
 
