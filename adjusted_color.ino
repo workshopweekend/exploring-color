@@ -29,7 +29,7 @@ void setAdjustedColor(int redValue, int greenValue, int blueValue) {
 }
 
 void loop() {
-  setColorAdjusted(analogRead(redInput)/4,
+  setAdjustedColor(analogRead(redInput)/4,
                    analogRead(greenInput)/4,
-                   analogRead(blueInput))/4;
+                   analogRead(blueInput)/4);
 }
