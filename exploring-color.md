@@ -18,23 +18,23 @@ An RGB LED works like a computer screen; it relies on how your eye detects color
     <%= sequence.ino =%>
 5.  Notice that the mixed colors are not very accurate -- in fact, the proportions are pretty far off! How can we fix this?
 
-6.  You can adjust the brightness of an LED, and of a single color "channel" in your RGB LED, by using `analogWrite` instead of `digitalWrite`. `analogWrite` blinks very quickly (faster than you can perceive) and can simulate different brightness levels by sending specially timed pulses. This particular type of pulse pattern is called "pulse-width modulation" (PWM); only the pins marked with `~` support it.
+    You can adjust the brightness of an LED, and of a single color "channel" in your RGB LED, by using `analogWrite` instead of `digitalWrite`. `analogWrite` blinks very quickly (faster than you can perceive) and can simulate different brightness levels by sending specially timed pulses. This particular type of pulse pattern is called "pulse-width modulation" (PWM); only the pins marked with `~` support it.
 
     Modify your sequence code to reduce the brightness of the green channel wherever it is used. You may find the [reference for the `analogWrite` function](http://arduino.cc/en/Reference/AnalogWrite) helpful, especially the example code. Can you get a convincing orange color?
 
-7.  Uploading new code to see the effects of new arguments to `analogWrite` is tedious. Instead, use a potentiometer to control the brightness of each color. Connect three potentiometers to analog pins `A0`, `A1`, and `A2`.
+6.  Uploading new code to see the effects of new arguments to `analogWrite` is tedious. Instead, use a potentiometer to control the brightness of each color. Connect three potentiometers to analog pins `A0`, `A1`, and `A2`.
 
     ![three-potentiometers dim=400wL](img/three-potentiometers.png "Fritzing for RGB LED and three potentiometers") ![three-potentiometers dim=400wL](img/three-potentiometers-schematic.png "Schematic for RGB LED and three potentiometers")
 
-8.  Use `analogRead` on pins `A0`, `A1`, and `A2`, respectively, to set the value for `analogWrite` on `redPin`, `greenPin`, and `bluePin`. Note that `analogRead` returns a number between `0` and `1023`, while `analogWrite` requires a number between `0` and `255`. To convert the input value to the output value, you can simply divide by `4`. In case you get stuck, here's a possible set of code:
+7.  Use `analogRead` on pins `A0`, `A1`, and `A2`, respectively, to set the value for `analogWrite` on `redPin`, `greenPin`, and `bluePin`. Note that `analogRead` returns a number between `0` and `1023`, while `analogWrite` requires a number between `0` and `255`. To convert the input value to the output value, you can simply divide by `4`. In case you get stuck, here's a possible set of code:
     <%= analogRead_to_analogWrite.ino =%>
-9.  Turn all the potentiometers to 0. You should observe the LED off.
+8.  Turn all the potentiometers to 0. You should observe the LED off.
 
-10. Modify your code to use [the `map` function](http://arduino.cc/en/Reference/map) to convert the input value to the output value, instead of dividing by 4.
+9.  Modify your code to use [the `map` function](http://arduino.cc/en/Reference/map) to convert the input value to the output value, instead of dividing by 4.
 
-11. Experiment by turning the red and green potentiometers to get a convincing orange color. (Try full red and a little green?) Can you get teal? Purple? What about gray?
+10. Experiment by turning the red and green potentiometers to get a convincing orange color. (Try full red and a little green?) Can you get teal? Purple? What about gray?
 
-12. In the next few steps, you'll modify your code so that turning all three potentiometers fully on produces a nice white color.
+11. In the next few steps, you'll modify your code so that turning all three potentiometers fully on produces a nice white color.
 
     To start, adjust all three potentiometers to get as nice a white color as you can.
 
