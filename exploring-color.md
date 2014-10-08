@@ -4,7 +4,7 @@ An RGB LED works like a computer screen; it relies on how your eye detects color
 
 ![color-receptivity dim=310h](img/color-responsivity.png "Sensitivity of the red, green, and blue cone cells in your eye")
 
-1.  Start with the following circuit. Make sure to orient the LED correctly -- the flat side should be on the left as in the diagram below.
+1.  Start with the following circuit. Make sure to orient the LED correctly -- the flat side should be on the left as in the diagram below. Use 330&Omega; resistors (or close -- 220&Omega; is fine too).
 
     ![just-the-led dim=400wL](img/just-the-led-please.png "Fritzing for RGB LED with single active channel") ![just-the-led-schematic dim=400wL](img/just-the-led-please-schematic.png "Schematic for RGB LED with single active channel")
 
